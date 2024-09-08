@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive navbar using Tailwind CSS</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="flex p-3 bg-white justify-between items-center">
+      <a href="#" id="brand" class="flex gap-2 items-center">
+        <img
+          src="./images/todesktop-logo.bn2Qe8sb.avif"
+          alt="logo"
+          class="object-cover max-w-12 max-h-12"
+        />
+        <span class="text-lg font-medium font-display">ToDesktop</span>
+      </a>
+      <div class="nav-menu hidden lg:flex gap-12 hidden">
+        <a href="#" class="font-medium hover:text-primary">Pricing</a>
+        <a href="#" class="font-medium hover:text-primary">Docs</a>
+        <a href="#" class="font-medium hover:text-primary">Changing</a>
+        <a href="#" class="font-medium hover:text-primary">Blogs</a>
+        <a href="#" class="font-medium hover:text-primary">Login</a>
+      </div>
+      <button
+        class="hidden lg:flex gap-2 items-center border rounded-lg border-gray-400 px-6 py-2 hover:border-gray-600"
+      >
+        <img src="./images/electron-icon.E8mrXtZM.svg" alt="" />
+        <span> Electrone Developers </span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+      <button class="p-2 lg:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-gray-600"></i>
+      </button>
+
+      <div
+        id="nav-dialog"
+        class="hidden fixed z-10 md:hidden bg-white inset-0 p-3"
+      >
+        <div class="nav-bar flex justify-between">
+          <a href="#" id="brand" class="flex gap-2 items-center">
+            <img
+              src="./images/todesktop-logo.bn2Qe8sb.avif"
+              alt="logo"
+              class="object-cover max-w-12 max-h-12"
+            />
+            <span class="text-lg font-medium font-display">ToDesktop</span>
+          </a>
+          <button class="p-2 md:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-gray-600"></i>
+          </button>
+        </div>
+        <div class="mt-6">
+          <a
+            href="#"
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Pricing</a
+          >
+          <a
+            href="#"
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Docs</a
+          >
+          <a
+            href="#"
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Changing</a
+          >
+          <a
+            href="#"
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Blogs</a
+          >
+          <a
+            href="#"
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Login</a
+          >
+        </div>
+        <div class="h-[1px] bg-gray-300">
+          <button
+            class="w-full mt-6 flex gap-2 items-center rounded-lg px-6 py-4 hover:bg-gray-50"
+          >
+            <img src="./images/electron-icon.E8mrXtZM.svg" alt="" />
+            <span> Electrone Developers </span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </body>
+  <script src="Script.js"></script>
+</html>
